@@ -18,7 +18,7 @@
         "guzzlehttp/guzzle-services": "0.5.*"
     },
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "OneRoaster\\": "src/"
         }
     }
