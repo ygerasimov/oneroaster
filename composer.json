@@ -1,0 +1,25 @@
+{
+    "name": "oneroaster/oneroaster",
+    "type": "library",
+    "description": "OneRoaster SDK php wrapper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yuriy Gerasimov",
+            "email": "yuri.gerasimov@gmail.com",
+            "homepage": "https://github.com/ygerasimov"
+        }
+    ],
+
+    "keywords": ["oneroaster", "rest", "web service"],
+    "require": {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle": "~5.0",
+        "guzzlehttp/guzzle-services": "0.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "OneRoaster\\": "src/"
+        }
+    }
+}

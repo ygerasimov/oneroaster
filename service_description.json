@@ -1,0 +1,30 @@
+{
+  "name": "OneRoaster",
+  "apiVersion": "v2",
+  "baseUrl": "https://nodeapi.classlink.com/v2/oneroster",
+  "description": "Service description for OneRoaster REST API",
+  "operations": {
+    "getMyInfo": {
+      "httpMethod": "GET",
+      "uri": "/my/info",
+      "summary": "Get information about my account",
+      "responseClass": "MyInfoOutput"
+    }
+  },
+  "models": {
+    "MyInfoOutput": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "location": "status",
+          "type": "integer"
+        },
+        "user": {
+          "location": "User",
+          "type": "object"
+        }
+      }
+    }
+  },
+  "includes": []
+}
