@@ -1,10 +1,12 @@
 <?php
 
-use GuzzleHttp\Client;
+namespace OneRoaster;
+
+use GuzzleHttp\Client as GuzzleHttpClient;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
 use GuzzleHttp\Command\Guzzle\Description;
 
-namespace OneRoaster;
+
 
 /**
  * Class Client
@@ -14,12 +16,10 @@ namespace OneRoaster;
  * API https://sandbox.oneroster.com/learningdata/v1
  */
 class Client {
-  protected $config;
-
   protected $client;
 
   public function __construct($token, $path_to_description = __DIR__ . '/../service_description.json') {
-    $client = new Client();
+    $client = new GuzzleHttpClient();
     $client->setDefaultOption('headers/Authorization', 'Bearer ' . $token);
 
     $description_data = json_decode(file_get_contents($path_to_description));
