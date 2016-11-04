@@ -22,13 +22,13 @@ class Client {
     $client = new GuzzleHttpClient();
     $client->setDefaultOption('headers/Authorization', 'Bearer ' . $token);
 
-    $description_data = json_decode(file_get_contents($path_to_description));
+    $description_data = json_decode(file_get_contents($path_to_description), TRUE);
     $description = new Description($description_data);
 
     $this->client = new GuzzleClient($client, $description);
   }
   
   public function __call($name, $arguments) {
-    $this->client->{$name}($arguments);
+    return $this->client->{$name}($arguments);
   }
 }

@@ -14,15 +14,9 @@
   "models": {
     "MyInfoOutput": {
       "type": "object",
-      "properties": {
-        "status": {
-          "location": "status",
-          "type": "integer"
-        },
-        "user": {
-          "location": "User",
-          "type": "object"
-        }
+      "additionalProperties": {
+        "location": "json",
+        "user": "json"
       }
     }
   },
